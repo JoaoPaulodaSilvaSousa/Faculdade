@@ -7,7 +7,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -15,13 +15,155 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
+    background-image: linear-gradient(180deg, var(--cor-primaria), var(--cor-secundaria));
     color: white;
 }
 
 .navegacao {
     position: fixed;
-    background-image: linear-gradient(to right, #DBDDE7, #333029);
+    top:0;
+    background-image: linear-gradient(to left, #00000054, #f5a40275);
     width: 100%;
     text-decoration: none;
+    z-index: 100; /* garante que a .navegacao fique sempre por cima de tudo*/
+    padding: 1.4rem; /* significa "root em" e se refere ao tamanho da fonte definida no elemento raiz do documento HTML.Se o tamanho da fonte raiz for, por exemplo, 16 pixels, então 1.5rem equivalerá a 24 pixels (1.5 x 16).*/
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem; /* espaçamento*/
+}
+.link-menu {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.link-menu::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.527), rgba(255, 255, 0, 0.438));
+    transition: width 0.5s ease;
+}
+
+.link-menu:hover::after {
+    width: 100%;
+}
+
+.bloco{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+}
+#titulo {
+    font-size: 3em;
+}
+
+#sobre {
+    padding: 1rem;
+    max-width: 3000px;
+    margin: 0 auto; /*sempre que quiser centralizar algo, pode usar margin:0 (margin nos quatro lados) auto;*/
+    border:1px solid black;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /*efeito de espaçado (precisa de um background como mostra na linha debaixo ⬇)*/
+    background: #00000079;
+}
+
+.mainp {
+    background: url(imagens/jovem-m.jpeg) no-repeat;
+    background-size: cover;
+    width: 5000px;
+    height: 600px;
+    box-shadow: 8px 2px 3px -3px rgba(0,0,0,0.76);
+    border-radius: 30px;
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+#sobre{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.projetos {
+    padding: 6rem 2rem;
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*o que você está dizendo ao CSS é: Crie o máximo de colunas possível que tenham no mínimo 300px de largura, e que se expandam até preencher o espaço restante (1fr).*/
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-card {
+    background-color: #00000079;
+    border-radius: 7px;
+    backdrop-filter: blur(5px);
+    border: 1px solid black;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.projetos-titulos {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 0, 0.445);
+    transform: translateY(-10px);
+}
+
+.projetos-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover; /*Se você quer estilizar uma imagem real no HTML, use object-fit. | Se quer estilizar uma imagem como fundo de um div, use background-size.*/
+}
+
+.caixa-texto {
+    padding: 1rem;
+}
+
+.projetosp {
+    color: rgba(255, 255, 255, 0.521);
+    line-height: 1.25rem;
+}
+
+.subh {
+ margin-bottom: 5px;
+}
+
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: radial-gradient(circle at 10% 20%, lightgray 0%, transparent 20%), radial-gradient(circle at 90% 80%, white 0%, transparent 20%);
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
 }
