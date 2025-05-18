@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
     --cor-primaria: #000000;
     --cor-secundaria: #F5A602;
@@ -82,10 +84,11 @@ body {
 }
 
 .mainp {
-    background: url(imagens/jovem-m.jpeg) no-repeat;
+    background: url(imagens/minha-foto-gliblih.png) no-repeat;
+    background-position: top center;
     background-size: cover;
     width: 5000px;
-    height: 600px;
+    height: 650px;
     box-shadow: 8px 2px 3px -3px rgba(0,0,0,0.76);
     border-radius: 30px;
     animation: flutuar 5s ease-in-out infinite;
@@ -157,6 +160,36 @@ body {
     z-index: -1;
     opacity: 0.5;
     background: radial-gradient(circle at 10% 20%, lightgray 0%, transparent 20%), radial-gradient(circle at 90% 80%, white 0%, transparent 20%);
+}
+
+.redes-sociais-bloco {
+    padding: 50px;
+}
+
+.redes-titulo {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 30px;
+}
+
+.bloco-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.redes-imagens {
+    margin: 10px;;
+    height: 300px;
+    width: 300px;
+    padding: 30px;
+    /* adicionar animaçao de onda */
+}
+
+.redes-imagens:hover {
+    transform: translate(-3px, -3px);
+    transition: transform .4s, border 1s;
 }
 
 @keyframes flutuar {
