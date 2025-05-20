@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body onresize="celular()">
+    <span class="material-symbols-outlined" onclick="clickmenu()">menu</span>
     <div class="particulas"></div>
-    <nav class="navegacao">
+    <nav id="itens" class="navegacao">
         <ul class="menu">
             <li><a href="#inicio" class="link-menu">Início</a></li>
+            <li><a href="#sobre" class="link-menu">Sobre Mim</a></li>
             <li><a href="#projetos" class="link-menu">Projetos</a></li>
             <li><a href="#redes-sociais" class="link-menu">Redes Sociais</a></li>
         </ul>
     </nav>
     <div class="bloco">
         <main id="inicio" class="mainp"> </main> <!-- Minha imagem -->
-            <section>
-                <h2  id="titulo">Sobre Mim</h2>
-                <p id="sobre" class="conteudo">es ut quisquam obcaecati enim repellendus quia explicabo provident quos praesentium quasi impedit quaerat fugiat minima laudantium eos? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, magnam in. Delectus quam quaerat et magni earum, amet natus, dolores dolore pariatur dicta quo, sunt veniam voluptas quia odio fugit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam rem nihil consequatur recusandae minus repellat deleniti dolores soluta! Incidunt magnam ut cupiditate architecto ratione dolor ullam perspiciatis deserunt totam libero</p>
-            </section>
+        <h1 class="h1">João Paulo</h1>
+        <p class="pp">Desenvolvedor Front End</p>
     </div>
+    <h2 id="titulo">Sobre Mim</h2>
+    
+    <section id="sobre" class="conteudo-bloco">
+        <p class="conteudo-p">Olá, me chamo João Paulo. Estou cursando de Análise e Desenvolvimento de Softwares na Unibta. Gosto muito de programar, e começei recentemente meus estudos na aréa.</p> <br>
+        <p class="conteudo-p">Iniciei o curso para me aprofundar ainda mais na programação e me profissionalizar na aréa, com objetivo de cescer, me estabelecer e sustenar com a carreira.</p>
+    </section>
 
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulos">Meus Projetos</h2>
         <div class="projetos-caixa">
             <div class="projetos-card">
-                <a href="https://joaopaulodasilvasousa.github.io/desafio-android/" target="_blank"><img src="imagens/curiosidades-tec.PNG" alt="" class="projetos-img"></a>
+                <a href="https://joaopaulodasilvasousa.github.io/desafio-android/" target="_blank"><img
+                        src="imagens/curiosidades-tec.PNG" alt="" class="projetos-img"></a>
                 <div class="caixa-texto">
                     <h3 class="subh">Curiosidades-tec</h3>
-                    <p class="projetosp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo atque suscipit quidem quos voluptas nam laudantium</p>
+                    <p class="projetosp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo atque
+                        suscipit quidem quos voluptas nam laudantium</p>
                 </div>
             </div>
 
             <div class="projetos-card">
-                <a href="https://joaopaulodasilvasousa.github.io/projeto-login/" target="_blank"><img src="imagens/login.PNG" alt="" class="projetos-img"></a>
+                <a href="https://joaopaulodasilvasousa.github.io/projeto-login/" target="_blank"><img
+                        src="imagens/login.PNG" alt="" class="projetos-img"></a>
                 <div class="caixa-texto">
                     <h3 class="subh">Curiosidades-tec</h3>
-                    <p class="projetosp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo atque suscipit quidem quos voluptas nam laudantium</p>
+                    <p class="projetosp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo atque
+                        suscipit quidem quos voluptas nam laudantium</p>
                 </div>
             </div>
 
             <div class="projetos-card">
-                <a href="https://joaopaulodasilvasousa.github.io/projeto-social/" target="_blank"><img src="imagens/tela.PNG" alt="" class="projetos-img"></a>
+                <a href="https://joaopaulodasilvasousa.github.io/projeto-social/" target="_blank"><img
+                        src="imagens/tela.PNG" alt="" class="projetos-img"></a>
                 <div class="caixa-texto">
                     <h3 class="subh">Curiosidades-tec</h3>
-                    <p class="projetosp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo atque suscipit quidem quos voluptas nam laudantium</p>
+                    <p class="projetosp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo atque
+                        suscipit quidem quos voluptas nam laudantium</p>
                 </div>
             </div>
 
@@ -54,13 +68,15 @@
     </section>
     <section class="redes-sociais-bloco">
         <h1 id="redes-sociais" class="redes-titulo">Minhas redes sociais</h1>
-            <div class="bloco-img">
-                <a href="https://github.com/JoaoPaulodaSilvaSousa" target="_blank"><img src="imagens/Github-desktop-logo-symbol.svg.png" alt="" class="redes-imagens"></a>
-                <a href="#"><img src="imagens/Instagram_logo_2022.svg.webp" alt="" class="redes-imagens"></a>
-                <a href="#"><img src="imagens/Facebook_f_logo_(2019).svg.png" alt="" class="redes-imagens"></a>
-            </div>
+        <div class="bloco-img">
+            <a href="https://github.com/JoaoPaulodaSilvaSousa" target="_blank"><img
+                    src="imagens/Github-desktop-logo-symbol.svg.png" alt="" class="redes-imagens"></a>
+            <a href="#"><img src="imagens/Instagram_logo_2022.svg.webp" alt="" class="redes-imagens"></a>
+            <a href="#"><img src="imagens/Facebook_f_logo_(2019).svg.png" alt="" class="redes-imagens"></a>
+        </div>
     </section>
     <footer id="roda-pe"></footer>
     <script src="script.js"></script>
 </body>
+
 </html>

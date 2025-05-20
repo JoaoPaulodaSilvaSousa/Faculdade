@@ -12,6 +12,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#inicio, #sobre, #projetos, #redes-sociais {
+    scroll-margin-top: 130px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -45,7 +49,7 @@ body {
     padding: 0.5rem 0;
 }
 
-.link-menu::after{
+.link-menu::after {
     content: '';
     height: 2px;
     width: 0;
@@ -60,37 +64,56 @@ body {
     width: 100%;
 }
 
-.bloco{
-    margin-top: 30px;
+.bloco {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 40px;
-}
-#titulo {
-    font-size: 3em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    min-height: 100vh;
 }
 
-#sobre {
+.h1 {
+    font-size: 5.5rem;
+    padding: 10px
+}
+
+.pp {
+    font-size: 1.5rem;
+    color: white;
+}
+
+#titulo {
+    font-size: 3rem;
+    padding: 15px;
+    text-align: center;
+}
+
+.conteudo-bloco {
     padding: 1rem;
-    max-width: 3000px;
+    max-width: 600px;
     margin: 0 auto; /*sempre que quiser centralizar algo, pode usar margin:0 (margin nos quatro lados) auto;*/
     border:1px solid black;
     border-radius: 10px;
     backdrop-filter: blur(10px); /*efeito de espaçado (precisa de um background como mostra na linha debaixo ⬇)*/
-    background: #00000079;
+    background: #00000079; 
+}
+
+.conteudo-p {
+    line-height: 40px;
+    text-align: justify;
+    font-size: 1.3rem;
 }
 
 .mainp {
     background: url(imagens/minha-foto-gliblih.png) no-repeat;
-    background-position: top center;
+    background-position: center;
     background-size: cover;
-    width: 5000px;
-    height: 650px;
+    border-radius: 300px;
+    width: 300px;
+    height: 300px;
     box-shadow: 8px 2px 3px -3px rgba(0,0,0,0.76);
-    border-radius: 30px;
+    border-radius: 50%px;
     animation: flutuar 5s ease-in-out infinite;
 }
 
@@ -179,17 +202,29 @@ body {
     flex-wrap: wrap;
 }
 
+
 .redes-imagens {
     margin: 10px;;
     height: 300px;
     width: 300px;
     padding: 30px;
-    /* adicionar animaçao de onda */
+    animation: flutuar 5s ease-in-out infinite;
 }
 
+.bloco-img:hover .redes-imagens { /*Quando o mouse estiver sobre qualquer parte do container .bloco-img, aplique opacity: 0.4 a todas as .redes-imagens dentro dele*/
+    opacity: 0.4;
+    transition: all 0.5s ease-in-out;
+    animation-play-state: paused;
+}
+
+
 .redes-imagens:hover {
-    transform: translate(-3px, -3px);
-    transition: transform .4s, border 1s;
+    opacity: 1 !important;
+    animation-play-state: running !important;
+    transform: translateY(-10px); /*configura uma transição suave para quando qualquer propriedade mudável/animável sofrer alteração (ex: width, height, background-color, transform, opacity, etc.).*/
+    box-shadow: 8px 2px 3px -3px rgba(0,0,0,0.76);
+    border-radius: 40px;
+    border: 2px solid black;
 }
 
 @keyframes flutuar {
