@@ -24,6 +24,18 @@ body {
     background-image: linear-gradient(180deg, var(--cor-primaria), var(--cor-secundaria));
     color: white;
 }
+.material-symbols-outlined {
+    background-color: yellow;
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+.material-symbols-outlined:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
 
 .navegacao {
     position: fixed;
