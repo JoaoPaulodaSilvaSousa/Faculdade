@@ -1,88 +1,32 @@
-@media screen and (max-width: 767px) {
-    .navegacao {
-        display: none;
-        position: static;
-        
-    }
-}
-
+/* Estilos para telas grandes */
 
 @media screen and (min-width: 768px) {
     .material-symbols-outlined {
         display: none;
-    }
-    .navegacao {
-        display: block;
+        position: fixed;
     }
 }
 
-/* Padrão: navegação escondida no mobile */
-/* .navegacao {
-    display: none;
-} */
-
-/* .material-symbols-outlined {
-    display: none; some no padrão, aparece no mobile via media query */
-/* } */
-
 /* Estilos para telas pequenas */
-/* @media screen and (max-width: 767px) {
-    .navegacao.ativo { /* Quando ativar, aparece em coluna */
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100%;
-        position: static;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
+@media screen and (max-width: 767px) {
     .material-symbols-outlined {
-        display: block;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-image: linear-gradient(to left, #00000054, #f5a40275);
         position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 999;
-        background: rgba(0,0,0,0.7);
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 1rem;
-        list-style: none;
-        padding: 0;
-    }
-
-    .link-menu {
-        font-size: 1.2rem;
-        color: white;
-        text-decoration: none;
-    }
-} */
-
-/* Estilos para telas grandes */
-/* @media screen and (min-width: 768px) {
-    .navegacao {
-        display: block; /* ou flex, depende do seu layout */
-        /* position: fixed;
-        width: 100%;
+        width: 100vw;
         top: 0;
         z-index: 100;
     }
 
-    .material-symbols-outlined {
+    .navegacao {
         display: none;
+        position: fixed;
+        z-index: 99;
+        border-radius: 0px 10px;
+        margin-top: 10px;
+        gap: 1rem;
     }
+}
 
-    .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 3rem;
-    } */
-/* } */
+
