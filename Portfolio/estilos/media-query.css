@@ -11,10 +11,10 @@
 @media screen and (max-width: 767px) {
     .material-symbols-outlined {
         border: 1px solid black;
-        border-radius: 10px;
-        background-image: linear-gradient(to left, #00000054, #f5a40275);
+        border-radius: 0px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.527), rgba(255, 255, 0, 0.438));
         position: fixed;
-        width: 100vw;
+        width: 101vw;
         top: 0;
         z-index: 100;
     }
@@ -26,10 +26,11 @@
         border-radius: 0px 10px;
         margin-top: 4px;
         gap: 1rem;
-        background-color: rgb(128, 128, 128);
+        padding: 0rem;
     }
 
     .menu {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -37,11 +38,23 @@
     }
 
     .link-menu {
+        background-image: linear-gradient(to left, #00000054, #f5a40275);
         display: inline-block;
-        width: 99vw;
+        width: 100vw;
         text-align: center;
-        border-radius: 10px;
         border: 1px solid black;
+    }
+
+    .link-menu::after {
+    content: ''; /*Mesmo vazio, é obrigatório para que o pseudoelemento exista.*/
+    height: 100%;
+    width: 0; /*Isso é feito para que ele não apareça inicialmente.
+Quando o usuário passa o mouse, a largura será aumentada, criando uma animação de expansão.*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.527), rgba(0, 0, 0, 0.438));
+    transition: width 1s ease;
     }
 }
 
