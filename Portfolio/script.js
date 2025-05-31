@@ -1,10 +1,10 @@
-// function celular() {
-//             if (window.innerWidth <= 768) {
-//                 itens.style.display = 'block'
-//             } else {
-//                 itens.style.display = 'none'
-//             }
-//         }
+function celular() {
+    if (window.innerWidth >= 767) {
+        itens.style.display = 'block'
+    } else {
+        itens.style.display = 'none'
+    }
+}
 
 function clickmenu() {
     if (itens.style.display == 'block') {
