@@ -172,6 +172,19 @@ body {
     width: 100%;
     object-fit: cover; /*Se você quer estilizar uma imagem real no HTML, use object-fit. | Se quer estilizar uma imagem como fundo de um div, use background-size.*/
 }
+#img1 {
+    object-position: 10% center;
+    transform: scale(0.999);
+}
+
+#img2 {
+    object-position: top;
+    transform: scale(1.1);
+}
+
+#img3 {
+    object-fit: fill;
+}
 
 .caixa-texto {
     padding: 1rem;
@@ -221,6 +234,12 @@ body {
     width: 300px;
     padding: 30px;
     animation: flutuar 5s ease-in-out infinite;
+    transition: 
+      opacity 1s ease,
+      transform 1s ease,
+      box-shadow 1s ease,
+      border-radius 1s ease,
+      border 1s ease;
 }
 
 .bloco-img:hover .redes-imagens { /*Quando o mouse estiver sobre qualquer parte do container .bloco-img, aplique opacity: 0.4 a todas as .redes-imagens dentro dele*/
