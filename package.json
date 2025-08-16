@@ -1,0 +1,23 @@
+{
+  "name": "projeto-portfolio",
+  "version": "1.0.0",
+  "description": "Projeto portfolio para faculdade!\r <p><a href=\"https://joaopaulodasilvasousa.github.io/Projeto-portfolio/Portfolio/index.html\">Clique aqui para acessar</a></p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoPaulodaSilvaSousa/Faculdade.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoaoPaulodaSilvaSousa/Faculdade/issues"
+  },
+  "homepage": "https://github.com/JoaoPaulodaSilvaSousa/Faculdade#readme",
+  "dependencies": {
+    "easytimer.js": "^4.6.0"
+  }
+}
