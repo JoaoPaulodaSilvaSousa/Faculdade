@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrevistas</title>
+
+    <style>
+        #idade {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual o seu sistema operacional?</h1>
+    <p>Quantas pessoas foram entrevistadas hoje?</p>
+    <input type="number" name="num_entrevistados" id="num_entrevistados" required placeholder="Número de entrevistados."> <br> <br>
+    <input type="text" name="SO" id="SO" placeholder="O seu sistema operacional."><br><br>
+    <input type="text" name="idade" id="idade" placeholder="Idade entrevistados (separe com ',' os valores)" width="550px">
+    <input type="button" value="enviar" onclick="calc()">
+    <div id="res"></div>
+    <script src="index.js"></script>
+</body>
+</html>
