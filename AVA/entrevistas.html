@@ -9,14 +9,23 @@
         #idade {
             width: 300px;
         }
+        #IOS, #Android {
+            width: 50px;
+        }
+
+        h3 {
+            display: inline-block; 
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
     <h1>Qual o seu sistema operacional?</h1>
-    <p>Quantas pessoas foram entrevistadas hoje?</p>
-    <input type="number" name="num_entrevistados" id="num_entrevistados" required placeholder="Número de entrevistados."> <br> <br>
-    <input type="text" name="SO" id="SO" placeholder="O seu sistema operacional."><br><br>
-    <input type="text" name="idade" id="idade" placeholder="Idade entrevistados (separe com ',' os valores)" width="550px">
+    <h2>Quantas pessoas foram entrevistadas hoje?</h2>
+    <input type="number" name="num_entrevistados" id="num_entrevistados" placeholder="Número de entrevistados."> <br>
+    <h2>Quantidade de SO por usuários</h2>
+    <h3>IOS:</h3> <input type="number" name="IOS" id="IOS" ><h3>Android:</h3><input type="number" name="Android" id="Android"><br><br>
+    <input type="text" name="idade" id="idade" placeholder='Idade entrevistados (separe com "," os valores)' width="550px">
     <input type="button" value="enviar" onclick="calc()">
     <div id="res"></div>
     <script src="index.js"></script>
