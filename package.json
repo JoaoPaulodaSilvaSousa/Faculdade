@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JoaoPaulodaSilvaSousa/Faculdade#readme",
   "dependencies": {
-    "easytimer.js": "^4.6.0"
+    "easytimer.js": "^4.6.0",
+    "performance-now": "^2.1.0"
   }
 }

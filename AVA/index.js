@@ -54,8 +54,8 @@ function mostrarHistorico() {
         res.innerHTML += `<p>
         📅 ${dia.data}<br>
         👥 ${dia.entrevistados} entrevistados<br>
-        🍏 iOS: ${dia.ios}, 🤖 Android: ${dia.android}<br>
-        👶 Idade média: ${dia.mediaIdade.toFixed(1)}
+        📱 iOS: ${dia.ios}, 🤖 Android: ${dia.android}<br>
+        🧑 Idade média: ${dia.mediaIdade.toFixed(1)}
         </p>`;
     });
 }
