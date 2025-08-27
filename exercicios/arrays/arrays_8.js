@@ -1,14 +1,28 @@
-let buscaBinaria = []
+let buscaBinaria = [];
+let escolha = 400; // The number you want to search
+let encontrado = false;
 
 for (let i = 0; i <= 1000; i++) {
-    buscaBinaria[i] = i + 1
+    buscaBinaria[i] = i + 1;
 }
- menor = 0;
- maior = 1000;
 
- while (menor <= maior) {
-    meio = Math.floor((menor + maior))/2
+let menor = 0;
+let maior = buscaBinaria.length - 1;
 
-    if (buscaBinaria === meio)
-        console.log(buscaBinaria[meio])
- }
+while (menor <= maior) {
+    let meio = Math.floor((menor + maior) / 2);
+
+    if (buscaBinaria[meio] === escolha) {
+        console.log("Achei no índice:", meio);
+        encontrado = true;
+        break;
+    } else if (buscaBinaria[meio] < escolha) {
+        menor = meio + 1;
+    } else {
+        maior = meio - 1;
+    }
+}
+
+if (!encontrado) {
+    console.log("Não encontrado");
+}
