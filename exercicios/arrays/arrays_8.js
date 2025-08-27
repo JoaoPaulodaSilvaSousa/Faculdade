@@ -1,26 +1,14 @@
-let list = [];
+let buscaBinaria = []
 
-function buscaBinaria(minhaEscolha) {
-    for (let i = 0; i <= 1000; i++) {
-        list[i] = i + 1
-    }
-
-    let menor = 0;
-    let maior = list.length - 1;
-    
-    while (menor <= maior) {
-        const meio = parseInt((menor + maior) / 2);
-
-        let valor = list[meio]
-
-        if (valor === minhaEscolha) {
-            return meio;
-        } if (valor > minhaEscolha) {
-            maior = meio - 1
-        } else {
-            menor = meio + 1
-        }
-    }
+for (let i = 0; i <= 1000; i++) {
+    buscaBinaria[i] = i + 1
 }
+ menor = 0;
+ maior = 1000;
 
-console.log(buscaBinaria(500));
+ while (menor <= maior) {
+    meio = Math.floor((menor + maior))/2
+
+    if (buscaBinaria === meio)
+        console.log(buscaBinaria[meio])
+ }
