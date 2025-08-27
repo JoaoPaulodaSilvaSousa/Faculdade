@@ -1,31 +1,24 @@
-import time
-inicio = time.perf_counter()
-
-novoArr = []
+buscaBinaria = []
 
 for i in range(1, 1001):
-    novoArr.append(i)
+    buscaBinaria.append(i)
 
-escolha = int(input("Digite um número: "))
+escolha = int(input("Escolha um número: "))
 menor = 0
-maior = len(novoArr) - 1
+maior = len(buscaBinaria) - 1
+encontrado = False
 
 while menor <= maior:
-    meio = (menor + maior) // 2
-    chute = novoArr[meio]
+    meio = (maior + menor) // 2
 
-    print(f"Tentando índice {meio}, valor {chute}")
-
-    if chute == escolha:
-        fim = time.perf_counter()
-        print(f"Achei! A sua escolha é o número {escolha}.")
-        print(f"Executado em {(fim - inicio):.3f} segundos")
+    if buscaBinaria[meio] == escolha:
+        print("Achei!")
+        encontrado = True
         break
-    elif chute < escolha:
+    elif buscaBinaria[meio] < escolha:
         menor = meio + 1
     else:
         maior = meio - 1
-else:
-    fim = time.perf_counter()
-    print("Número não encontrado.")
-    print(f"Executado em {(fim - inicio):.6f} segundos")
+
+if not encontrado:
+    print("Não encontrado.")
