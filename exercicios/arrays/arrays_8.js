@@ -1,5 +1,5 @@
 let buscaBinaria = [];
-let escolha = 400; // The number you want to search
+let escolha = 400;
 let encontrado = false;
 
 for (let i = 0; i <= 1000; i++) {
