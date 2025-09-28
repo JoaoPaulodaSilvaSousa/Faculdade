@@ -1,31 +1,18 @@
-import os
-import shutil
+with open(r'c:\Users\João Paulo\Documents\GitHub\Faculdade\Trabalho_PM\estoque.txt', 'r', encoding='utf-8') as arquivo:
+    estoque = [linha.strip() for linha in arquivo.readlines()]
 
-categorias = {
-    "Documentos": [".txt", ".docx", ".pdf"],
-    "Músicas": [".mp3", ".wav"],
-    "Imagens": [".jpg", ".jpeg", ".png", ".gif"],
-    "Vídeos": [".mp4", ".avi", ".mkv"]
-}
+nomes = [linha.split()[0] for linha in estoque]
 
-pasta_inicial = r"C:\Users\João Paulo\Desktop"
+def buscar_estoque(nomes):
+    duplicados = set([nome for nome in nomes if nomes.count(nome) > 1])
+    if duplicados:
+        return f"Produtos duplicados encontrados: {', '.join(duplicados)}. Remova ou edite."
+    else:
+        return "Não há duplicidade em seu estoque. Tudo certo por aqui."
 
-# Obter caminhos completos das pastas de destino
-pastas_destino = [os.path.join(pasta_inicial, cat) for cat in categorias]
+resultado = buscar_estoque(nomes)
 
-# Listar arquivos
-for pasta_atual, subpastas, lista_arquivos in os.walk(pasta_inicial):
-    # Ignorar pastas de destino
-    subpastas[:] = [p for p in subpastas if os.path.join(pasta_atual, p) not in pastas_destino]
-
-    for arquivo in lista_arquivos:
-        caminho_arquivo = os.path.join(pasta_atual, arquivo)
-        _, extensao = os.path.splitext(arquivo)
-
-        for categoria, extensoes in categorias.items():
-            if extensao.lower() in extensoes:
-                pasta_destino = os.path.join(pasta_inicial, categoria)
-                os.makedirs(pasta_destino, exist_ok=True)
-                shutil.move(caminho_arquivo, os.path.join(pasta_destino, arquivo))
-                print(f"Movido: {arquivo} → {categoria}")
-                break
+for item in estoque:
+    print(item)
+    
+print(resultado)
