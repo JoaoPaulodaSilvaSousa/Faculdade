@@ -1,0 +1,7 @@
+Produto	Quantidade
+Caderno 34
+Lápis 12
+Borracha 54
+Caneta 22
+Apontador 15
+Teclado 44

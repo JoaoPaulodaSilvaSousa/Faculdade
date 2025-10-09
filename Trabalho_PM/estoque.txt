@@ -1,5 +1,0 @@
-Nome:  Estoque:
-Lápis 12
-Caderno 143
-Borracha 54
-Caneta 22
